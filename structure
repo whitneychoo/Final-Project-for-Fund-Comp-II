@@ -1,0 +1,43 @@
+int scenario = 1;
+int default = whatever your last case is;
+
+while(scenario != default)
+{
+	if( mouseEvent )
+	{
+		switch( scenario )
+		{	
+			case 1:
+				setBackground();
+				music();
+				if( xpos>100 && xpos<300 && ypos>100 && ypos<300 )
+				{
+					scenario = 2;
+				}
+				if( xpos>300 && xpos<500 && ypos>100 && ypos<300 )
+				{
+					scenario =3;
+				}
+				break;
+			case 2:
+				etc.
+				break;
+			case 3:
+				//The levels where game is over
+				endGame();
+				break;
+			case 4:
+				//The level that goes to the next level
+				playMinigame();
+				if( minigame == 1 )
+				{
+					levelUp();
+				}
+				else
+				{
+					endGame();
+				}
+				break;		
+		}
+	}
+}
