@@ -15,27 +15,8 @@ class Scenario
 		Scenario(); //Constructor
 		int playLevel(); //Play the level
 
-		//Member Functions
-							//Starts up SDL & Creates window
-/*		void setBackground(string);			//Sets up background
-		void music(string);					//Sets up music
-		void endGame();						//Ends the Game
-		void levelUp(int);					//Changes the level
-		void makeButtons();					//Create buttons
-		void setCharacter(int x, int y);	//Position the character
-*/		
-
-		/*		int playMinigame();					//Play the minigame
-
-		//Load Individual Image
-		SDL_Surface* loadSurface( std::string path );
-
-		//Load Individual Image as Texture
-		SDL_Texture* loadTexture( std:: string path );
-*/
-	private:
-		//Data Members
-		
+	protected:
+			
 		
 };
 #endif

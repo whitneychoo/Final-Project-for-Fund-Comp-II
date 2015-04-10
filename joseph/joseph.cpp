@@ -17,20 +17,6 @@ int count = 0;
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
-//Starts up SDL and creates window
-bool init();
-
-//Loads media
-bool loadMedia(char*);
-
-//Frees media and shuts down SDL
-void close();
-
-//The window we'll be rendering to
-SDL_Window* gWindow = NULL;
-
-//The window renderer
-SDL_Renderer* gRenderer = NULL;
 
 //Scene textures
 LTexture gFooTexture;
@@ -38,6 +24,8 @@ LTexture gBackgroundTexture;
 
 
 Joseph::Joseph() : Scenario(){
+	gWindow = NULL;
+	gRenderer = NULL;
 }
 
 int Joseph::playLevel(){
@@ -100,7 +88,7 @@ int Joseph::playLevel(){
 	return 0;
 }
 
-bool init()
+bool Joseph::init()
 {
 	//Initialization flag
 	bool success = true;
@@ -154,7 +142,7 @@ bool init()
 	return success;
 }
 
-bool loadMedia(char bgname[])
+bool Joseph::loadMedia(char bgname[])
 {
 	if(strlen(bgname) == 0)
 		bgname = "toothless.jpg";
@@ -171,7 +159,7 @@ bool loadMedia(char bgname[])
 	return success;
 }
 
-void close()
+void Joseph::close()
 {
 	//Free loaded images
 	gFooTexture.free();
