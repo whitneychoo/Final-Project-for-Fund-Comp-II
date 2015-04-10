@@ -1,28 +1,14 @@
+#include "scenario.h"
 
-
-bool initialize(){
-	//initialization flag
-	bool success = true;
-
-	if(SDL_Init( SDL_INIT_VIDEO /*| SDL_INIT_AUDIO */) < 0 ){
-		printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
-		success = false;
-	} else {
-		window = SDL_CreateWindow( "Scenario Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
-		if(window == NULL){
-			printf("Window could not be created! SDL_Error: %s\n", SDL_GetError() );
-			success = false;
-		} else {
-			screenSurface = SDL_GetWindowSurface( window );
-			SDL_FillRect( screenSurface, NULL, SDL_MapRGB( screenSurface->format, 0xFF, 0xFF, 0xFF) );
-			SDL_UpdateWindowSurface( window );
-		}
-	}
+Scenario::Scenario(){
+}
+int Scenario::playLevel(){
 	
-	return success;
+	return 0;
 }
 
-SDL_Surface* setBackground( std::string path ){
+
+/*SDL_Surface* setBackground( std::string path ){
 
 	SDL_Surface* optimizedSurface = NULL;
 
@@ -84,3 +70,4 @@ void levelUp(){
 void Scenario::setBackground(string){
 	
 }
+*/

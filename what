@@ -1,0 +1,13 @@
+all:	main
+
+main: main.o joseph.o
+	g++ main.o joseph.o -o main
+	
+main.o: main.cpp
+	g++ -c main.cpp
+	
+whitney.o: whitney.cpp whitney.h
+	g++ -c whitney.cpp whitney.h
+
+clean:
+	rm -f *.o main
