@@ -289,7 +289,7 @@ int sam::playGame()
                 count = 1;
             }//makes sure that otherdot continues to move even though player dot doesn't move during mini game	
             if(mgPlay){
-                if(samTimer.getTicks() > 1000){
+                if(samTimer.getTicks() > 7000){
                     scenario = 8;
                     samTexture.loadMedia("scene1SC.png");
                     samDot.reset(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);

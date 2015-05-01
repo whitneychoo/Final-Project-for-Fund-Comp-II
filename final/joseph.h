@@ -111,7 +111,7 @@ int Joseph::playGame()
 							if(x <= 595 && x >= 578  && y >= 434 && y <= 450)
 								scenario = 10;	
 							else if(x <= 620 && x >= 10 && ((y >= 342 && y <= 357) || ( y >= 373 && y <= 390)))
-								scenario = 8;
+								scenario = 12;
 							else if(x <= 620 && x >= 10 && ((y >= 404 && y <= 418) || ( y >= 434 && y <= 448)))
 								scenario = 6;
 							break;
@@ -251,7 +251,7 @@ int Joseph::playGame()
 							//Choices
 							joeTextTexture.loadMedia("Go to the local tavern to see who's around.");
 							joeTextTexture.render(50, 340);
-							joeTextTexture.loadMedia("Hide under your blanket because the sun is too bright and fall back asleep.");
+							joeTextTexture.loadMedia("Hide under your blanket because the sun is bright and fall asleep.");
 							joeTextTexture.render(50, 380);
 							joeTextTexture.loadMedia("Go for a quick flight with Toothless.");
 							joeTextTexture.render(50, 420);
