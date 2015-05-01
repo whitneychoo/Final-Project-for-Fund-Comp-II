@@ -1,3 +1,8 @@
+/*Sam Cho, Whitney Choo, So Yon(Alli) Kwon, Joseph Yoon
+*CSE 20212, Spring 2015
+*Final Project
+*How to Kill Harry Pokemon
+*/
 #include "base.h"
 #include "WhitDot.h"
 #include "LTimer.h"
